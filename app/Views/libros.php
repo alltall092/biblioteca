@@ -19,6 +19,15 @@ width:100%;
 
 
 }
+.btn {
+margin:10px;
+
+
+}
+a{
+text-decoration:none;
+
+}
 
 </style>
   
