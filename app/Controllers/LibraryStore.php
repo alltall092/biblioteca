@@ -118,7 +118,7 @@ public  function trash(){
     $autores=new Autores();
     
     $trash=$autores->onlyDeleted()->findAll();
-    $data=["datos"=>$trash]
+    $data=["datos"=>$trash];
     return View("trash",$data);
     }
     public  function showAutores($id=null){

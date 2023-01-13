@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <style type="text/css">
 body{
-background-color:gray;
+background-color:lightgray;
 
 
 }
@@ -15,7 +15,7 @@ background-color:gray;
 background-color:white;
 color:black;
 margin-bottom:10px;
-width:90px;
+width:100%;
 
 
 }
@@ -26,6 +26,7 @@ width:90px;
   </head>
   <body>
   <!-- Button trigger modal -->
+  <div class="container">
   <div>
 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Create autores
@@ -299,6 +300,7 @@ width:90px;
    
   </tbody>
 </table>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
