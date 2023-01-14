@@ -37,7 +37,6 @@ class Autores extends Migration
             ],
         ]);
         $this->forge->addKey('autores_id', true);
-        $this->forge->addField("'deleted_at' datatime null");
         $this->forge->createTable('autores');
     }
 
