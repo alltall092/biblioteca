@@ -36,7 +36,9 @@ class LibraryStore extends BaseController
 
          
         $a=$autores->save($data);
-        return $a;
+        if($a){
+            return redirect()->route('/');
+           }
 
 
 
@@ -60,7 +62,9 @@ class LibraryStore extends BaseController
 
          
         $b=$autores->update($autores_id,$data);
- return $b;
+        if($b){
+            return redirect()->route('/');
+           }
 
 
 
@@ -79,7 +83,9 @@ public function guardarLibros(){
 
     ];
     $li=$libros->save($data);
-    return $li;
+    if($li){
+        return redirect()->route('/');
+       }
 
 }
 public function updateLibros(){
@@ -96,15 +102,19 @@ public function updateLibros(){
 
     ];
     $li=$libros->update($libros_id,$data);
-    return $li;
+    if($li){
+        return redirect()->route('/');
+       }
 
 }
 public function eliminarLibros($id=null){
     $libros=new Libros();
     
    $b=$libros->delete($id);
-return $b;
 
+   if($b){
+    return redirect()->route('/');
+   }
 
 }
 public  function eliminarAutores($id=null){
@@ -112,7 +122,9 @@ $autores=new Autores();
 
 $borrar=$autores->delete($id);
 
-return $borrar;
+if($borrar){
+ return redirect()->route('/');
+}
 }
 public  function trash(){
     $autores=new Autores();
