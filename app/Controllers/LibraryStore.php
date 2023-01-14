@@ -129,7 +129,8 @@ if($borrar){
 public  function trash(){
     $autores=new Autores();
     
-    $trash=$autores->onlyDeleted()->findAll();
+    $trash=$autores->withDeleted()->findAll();
+ 
     $data=["datos"=>$trash];
     return View("trash",$data);
     }

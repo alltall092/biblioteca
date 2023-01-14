@@ -41,7 +41,7 @@ text-decoration:none;
   Create autores
 </button>
 <button type="button" class="btn btn-danger">
-  <a href=<?=site_url('/trash'); ?>>trash</a>
+  <a href="<?=site_url('/trash'); ?>">trash</a>
 </button>
   </div>
 <!-- Modal -->
