@@ -27,7 +27,7 @@ ul li {
   
   </head>
   <body>
-<button type="button"> <a href=<?=site_url('/restore/');?>>View</a></button>
+<button type="button"> <a href=<?=site_url('/restore/');?>>Restore</a></button>
   <table class="table table-hover">
   <thead>
     <tr>

@@ -35,6 +35,12 @@ class Autores extends Migration
                 'type' => 'INT',
                 'null' => true,
             ],
+            'deleted_at' => [
+                'type' => 'datetime',
+                'null' => true,
+            ],
+            
+
         ]);
         $this->forge->addKey('autores_id', true);
         $this->forge->createTable('autores');
