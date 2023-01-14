@@ -120,7 +120,7 @@ public function eliminarLibros($id=null){
 public  function eliminarAutores($id=null){
 $autores=new Autores();
 
-$borrar=$autores->delete($id);
+$borrar=$autores->where("autores_id",$id)->delete();
 
 if($borrar){
  return redirect()->route('/');
@@ -129,7 +129,7 @@ if($borrar){
 public  function trash(){
     $autores=new Autores();
     
-    $trash=$autores->withDeleted()->findAll();
+    $trash=$autores->onlyDeleted()->findAll();
  
     $data=["datos"=>$trash];
     return View("trash",$data);
@@ -152,7 +152,7 @@ public  function trash(){
             public function Restore($id=null){
                 $autores=new Autores();       
 if($id!=null){
-$d=$autores->update($id,["deteled_at"=>null]);
+$d=$autores->where("autores_id",$id)->withDeleted()->first();
 return $d;
 }
 
